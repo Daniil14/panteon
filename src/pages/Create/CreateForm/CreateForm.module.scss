@@ -1,0 +1,109 @@
+@import "styles/mixins";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    > * {
+        margin-bottom: 32px;
+    }
+}
+
+.name {
+    all: unset;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    color: #1A2540;
+    margin-bottom: 40px;
+    cursor: auto;
+    width: 100%;
+    max-width: 628px;
+
+    &::placeholder {
+        color: rgba(158, 162, 173, 0.3);
+    }
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+.badge {
+    width: 128px;
+    height: 144px;
+}
+
+.logoActions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.logoChange,
+.logoUpload {
+    @include button-gray-border();
+    max-width: 220px;
+}
+
+.field {
+    @include form-field();
+    max-width: 628px;
+}
+
+.svg {
+    margin: 24px auto 16px;
+    line-height: 0;
+}
+
+.title {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 8px;
+
+    span {
+        font-weight: bold;
+        color: #1A2540;
+        margin: 0;
+    }
+}
+
+.city {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.cityChange {
+    @include button-blue();
+    max-width: 225px;
+}
+
+.group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 64px;
+    max-width: 628px;
+
+    .field {
+        width: calc(50% - 32px);
+    }
+}
+
+.semanticCore {
+    composes: field;
+    margin-bottom: 24px;
+}
+
+.submit {
+    @include button-blue();
+    max-width: 166px;
+    margin: 0;
+}

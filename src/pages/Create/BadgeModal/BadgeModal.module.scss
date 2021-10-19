@@ -1,0 +1,64 @@
+@import "styles/mixins";
+
+.container {
+    max-width: 602px;
+    padding: 24px;
+}
+
+.close {
+    @include button-close;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 52px;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #1A2540;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #9EA2AD;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 14px;
+    margin-bottom: 24px;
+}
+
+.badge {
+    position: relative;
+    width: 128px;
+    height: 144px;
+    cursor: pointer;
+
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: absolute;
+    }
+}
+
+.check {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.save {
+    @include button-blue();
+    width: 100%;
+}

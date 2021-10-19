@@ -1,0 +1,60 @@
+@import "styles/mixins";
+
+@keyframes show-modal{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-content {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0 ,0 , 0.4);
+
+    animation-name: show-modal;
+    animation-duration: 150ms;
+}
+
+.content {
+    position: relative;
+    background-color: #FFFEFC;
+    box-shadow: 0 1.2px 3.6px rgba(0, 0, 0, 0.11), 0 6.4px 14.4px rgba(0, 0, 0, 0.13);
+    border-radius: 4px;
+
+    animation-name: scale-content;
+    animation-duration: 150ms;
+}
+
+.close {
+    @include reset-button();
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg path {
+        fill: #434E6A;
+    }
+}

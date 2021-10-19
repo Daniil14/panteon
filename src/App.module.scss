@@ -1,0 +1,25 @@
+.container {
+    flex: 1;
+    width: 100%;
+}
+
+.main {
+    padding-left: 271px;
+}
+
+.wrapper {
+    padding: 40px 0 40px 40px;
+    width: 100%;
+    max-width: 1129px;
+}
+
+@media (min-width: 1674px) {
+    .wrapper {
+        --var-offset: calc(50% - ((100vw - 100%) / 2));
+        position: relative;
+        top: 0;
+        left: var(--var-offset);
+        padding: 40px 0;
+        transform: translateX(-50%);
+    }
+}

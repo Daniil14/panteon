@@ -1,0 +1,24 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.empty {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    color: #1A2540;
+    margin-bottom: 24px;
+}
+
+.link {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #316BFF;
+    background: rgba(49, 107, 255, 0.1);
+    border-radius: 5px;
+    padding: 6px 12px;
+}

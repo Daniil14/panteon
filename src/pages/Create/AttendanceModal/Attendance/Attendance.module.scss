@@ -1,0 +1,95 @@
+@import "src/styles/mixins";
+
+.container {
+    width: 602px;
+    padding: 24px;
+
+    :global(.simplebar-track.simplebar-vertical) {
+        width: 10px;
+        right: -16px;
+    }
+
+    :global(.simplebar-scrollbar.simplebar-visible:before) {
+        opacity: 1;
+        background: #9EA2AD;
+    }
+}
+
+.close {
+    @include button-close;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 52px;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #1A2540;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #9EA2AD;
+}
+
+.sort {
+    margin-bottom: 8px;
+    padding: 14px 0;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: -0.01em;
+    color: #9EA2AD;
+
+    span {
+        color: #316BFF;
+        cursor: pointer;
+    }
+}
+
+.cities {
+    margin-bottom: 24px;
+}
+
+.city {
+    margin-bottom: 4px;
+    display: flex;
+
+    &:nth-child(odd) {
+        background-color: #F5F6F6;
+    }
+
+    span {
+        width: 50%;
+        padding: 8px 24px;
+        font-size: 14px;
+        line-height: 15px;
+        letter-spacing: -0.01em;
+        color: #1A2540;
+    }
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.save {
+    @include button-blue;
+    width: 100%;
+}
+
+.reset {
+    @include button-transparent;
+}

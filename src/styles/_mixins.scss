@@ -1,0 +1,125 @@
+@mixin container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+//ui-buttons
+@mixin reset-button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@mixin button-layout {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+@mixin button-close {
+    @include reset-button;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg path {
+        fill: #434E6A;
+    }
+}
+
+@mixin button-gray {
+    @include reset-button();
+    @include button-layout();
+    background-color: #F5F6F6;
+    color: #9EA2AD;
+}
+
+@mixin button-gray-border {
+    @include reset-button();
+    @include button-layout();
+    color: #9EA2AD;
+    border: 1px solid #9EA2AD;
+}
+
+@mixin button-blue {
+    @include reset-button();
+    @include button-layout();
+    color: #316BFF;
+    background: rgba(49, 107, 255, 0.1);
+}
+
+@mixin button-blue-border {
+    @include reset-button();
+    @include button-layout();
+    color: #316BFF;
+    border: 1px solid #316BFF;
+}
+
+@mixin button-transparent {
+    @include reset-button();
+    @include button-layout();
+    color: #9EA2AD;
+}
+
+//ui-form
+@mixin reset-input {
+    border:none;
+    outline: none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    letter-spacing: inherit;
+    resize: none;
+}
+
+@mixin input {
+    @include reset-input();
+    width: 100%;
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(158, 162, 173, 0.3);
+    color: #1A2540;
+
+    &::placeholder {
+        color: #9EA2AD;
+    }
+}
+
+@mixin form-field {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    span {
+        color: #9EA2AD;
+        margin-bottom: 4px;
+    }
+
+    input,
+    textarea {
+        @include input();
+    }
+}

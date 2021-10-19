@@ -1,0 +1,73 @@
+@import "styles/mixins";
+
+.container {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 24px;
+    padding-bottom: 92px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 55px;
+    min-height: 411px;
+    background-image: url('/assets/svg/auth-background.svg');
+    background-repeat: no-repeat;
+    background-size: 644px 411px;
+    background-position: top 24px;
+}
+
+.wrapper {
+    width: calc(50% - 24px);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 437px;
+}
+
+.title {
+    font-size: 28px;
+    line-height: 48px;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    color: #1A2540;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+    color: #9EA2AD;
+    margin-bottom: 24px;
+}
+
+.input {
+    @include input();
+    margin-bottom: 16px;
+}
+
+.login {
+    @include button-blue();
+    max-width: 222px;
+    margin-bottom: 16px;
+}
+
+.restore {
+    @include reset-button();
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #9EA2AD;
+    text-decoration: underline;
+    align-self: flex-start;
+}

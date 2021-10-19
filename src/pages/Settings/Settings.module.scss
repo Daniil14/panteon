@@ -1,0 +1,54 @@
+@import "styles/mixins";
+
+.name {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    color: #1A2540;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.field {
+    @include form-field();
+    max-width: 437px;
+}
+
+.error input {
+    border: 1px solid #E06259;
+    color: #E06259;
+
+    &::placeholder {
+        color: #E06259;
+    }
+}
+
+.errorMessage {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #E06259;
+}
+
+.password {
+    position: relative;
+}
+
+.show {
+    @include reset-button();
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    line-height: 0;
+    transform: translateY(-50%);
+}
+
+.submit {
+    @include button-gray();
+    max-width: 207px;
+}
