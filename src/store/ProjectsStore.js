@@ -157,7 +157,7 @@ class ProjectsStore {
                     this.fetched = true;
                 });
             },
-            1000
+            2000
         );
     };
 
