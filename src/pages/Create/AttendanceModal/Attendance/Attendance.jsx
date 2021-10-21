@@ -7,7 +7,7 @@ import styles from './Attendance.module.scss';
 import {ReactComponent as CloseSvg} from 'assets/svg/close.svg';
 
 // Components:
-import Select from 'components/Select/Select';
+import Select from '../Select/Select';
 
 const Attendance = ({setIsOpen, setIsConfirm}) => {
     const cities = [
@@ -85,7 +85,7 @@ const Attendance = ({setIsOpen, setIsConfirm}) => {
                     городу.
                 </div>
             </header>
-            <Select/>
+            <Select cities={cities}/>
             <div className={styles.sort}>Сортировать: <span>По посещаемости</span></div>
             <SimpleBar style={{maxHeight: 350}} autoHide={false}>
                 <ul className={styles.cities}>
