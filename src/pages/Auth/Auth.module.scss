@@ -51,19 +51,29 @@
     margin-bottom: 24px;
 }
 
-.input {
-    @include input();
+.field {
     margin-bottom: 16px;
 }
 
+.input {
+    @include input;
+}
+
+.errorMessage {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #E06259;
+}
+
 .login {
-    @include button-blue();
+    @include button-blue;
     max-width: 222px;
     margin-bottom: 16px;
 }
 
 .restore {
-    @include reset-button();
+    @include reset-button;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.02em;

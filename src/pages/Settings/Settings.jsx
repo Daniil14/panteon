@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Formik, Form, Field} from 'formik';
-import * as Yup from "yup";
-import MaskedInput from "react-text-mask";
+import * as Yup from 'yup';
+import MaskedInput from 'react-text-mask';
 import styles from './Settings.module.scss';
 import Notifications from 'pages/Settings/Notifications/Notifications';
 
@@ -37,7 +37,7 @@ const Settings = () => {
             onSubmit={onSubmit}
         >
             {({errors, touched}) => (
-                <Form className={styles.form} autoComplete="off">
+                <Form className={styles.form}>
                     <h1 className={styles.name}>Екатерина</h1>
                     <label className={`${styles.field}${errors.name && touched.name ? ` ${styles.error}` : ''}`}>
                         <span>Имя</span>

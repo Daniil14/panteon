@@ -147,7 +147,7 @@
     color: #434E6A;
 
     button {
-        @include reset-button();
+        @include reset-button;
         display: flex;
         align-items: center;
         gap: 8px;

@@ -18,7 +18,7 @@
 }
 
 .hide {
-    @include reset-button();
+    @include reset-button;
     color: #316BFF;
     margin-bottom: 24px;
 }

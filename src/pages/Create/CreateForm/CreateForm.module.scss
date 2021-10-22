@@ -46,7 +46,7 @@
 }
 
 .logoChange {
-    @include button-gray-border();
+    @include button-gray-border;
     max-width: 220px;
 }
 
@@ -62,14 +62,14 @@
     }
 
     label {
-        @include button-gray-border();
+        @include button-gray-border;
         display: block;
         max-width: 220px;
     }
 }
 
 .field {
-    @include form-field();
+    @include form-field;
     max-width: 628px;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .cityChange {
-    @include button-blue();
+    @include button-blue;
     max-width: 225px;
 }
 
@@ -120,7 +120,7 @@
 }
 
 .submit {
-    @include button-blue();
+    @include button-blue;
     max-width: 166px;
     margin: 0;
 }
