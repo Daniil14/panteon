@@ -163,7 +163,7 @@ class ProjectsStore {
 
     addProject = (data) => {
         console.log('data', data);
-    }
+    };
 
     deleteProject = (id) => {
         this.projects = this.projects.filter((project) => project.id !== id);

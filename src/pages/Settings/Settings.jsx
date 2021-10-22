@@ -84,7 +84,7 @@ const Settings = () => {
                         </div>
                         {errors.pass && touched.pass && <div className={styles.errorMessage}>{errors.pass}</div>}
                     </label>
-                    <button className={styles.submit} type="submit">Подвтердить</button>
+                    <button className={styles.submit} type="submit">Подтвердить</button>
                     <Field name="notification" component={Notifications}/>
                 </Form>
             )}

@@ -22,6 +22,7 @@
     padding: 6px 12px;
     border-radius: 5px;
     border: 1px solid transparent;
+    transition: all 150ms ease-in-out;
 }
 
 @mixin button-close {
@@ -52,6 +53,10 @@
     @include button-layout;
     color: #9EA2AD;
     border: 1px solid #9EA2AD;
+
+    &:hover {
+        background: #F5F6F6;
+    }
 }
 
 @mixin button-blue {
@@ -59,6 +64,10 @@
     @include button-layout;
     color: #316BFF;
     background: rgba(49, 107, 255, 0.1);
+
+    &:hover {
+        background: rgba(49, 107, 255, 0.4);
+    }
 }
 
 @mixin button-blue-border {
@@ -66,6 +75,10 @@
     @include button-layout;
     color: #316BFF;
     border: 1px solid #316BFF;
+
+    &:hover {
+        background: rgba(49, 107, 255, 0.1);
+    }
 }
 
 @mixin button-transparent {
