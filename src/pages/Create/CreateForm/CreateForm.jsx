@@ -16,6 +16,7 @@ const CreateForm = () => {
     const initialValues = {
         image: '/images/badge-2.svg',
         name: '',
+        file: '',
         url: '',
         attendance: '',
         timeOnSite: '',
@@ -69,7 +70,10 @@ const CreateForm = () => {
                                     />
                                 </Modal>
                             )}
-                            <button className={styles.logoUpload} type="button">Загрузить фото проекта</button>
+                            <div className={styles.logoUpload}>
+                                <Field id="file" type="file" name="file" accept="image/png image/jpeg"/>
+                                <label htmlFor="file">Загрузить фото проекта</label>
+                            </div>
                         </div>
                     </div>
                     <label className={styles.field}>

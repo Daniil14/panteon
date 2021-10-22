@@ -45,10 +45,27 @@
     gap: 8px;
 }
 
-.logoChange,
-.logoUpload {
+.logoChange {
     @include button-gray-border();
     max-width: 220px;
+}
+
+.logoUpload {
+
+    input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    label {
+        @include button-gray-border();
+        display: block;
+        max-width: 220px;
+    }
 }
 
 .field {
