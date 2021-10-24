@@ -16,6 +16,7 @@ const CreateForm = () => {
     const initialValues = {
         image: '/images/badge-2.svg',
         name: '',
+        file: '',
         url: '',
         attendance: '',
         timeOnSite: '',
@@ -69,7 +70,10 @@ const CreateForm = () => {
                                     />
                                 </Modal>
                             )}
-                            <button className={styles.logoUpload} type="button">Загрузить фото проекта</button>
+                            <div className={styles.logoUpload}>
+                                <Field id="file" type="file" name="file" accept="image/png image/jpeg"/>
+                                <label htmlFor="file">Загрузить фото проекта</label>
+                            </div>
                         </div>
                     </div>
                     <label className={styles.field}>
@@ -79,7 +83,7 @@ const CreateForm = () => {
                     <div className={styles.city}>
                         <div className={styles.title}>
                             <span>Список городов для продвижения<br/>и посещаемость сайта в каждом городе</span>
-                            <Tooltip title="Средняя посещяемость"
+                            <Tooltip title="Средняя посещаемость"
                                      text="Каждому оформленному на сайте заказу устанавливается статус, который зависит от того, на каком этапе находится заказ и какие действия были совершены"
                             />
                         </div>
@@ -98,7 +102,7 @@ const CreateForm = () => {
                     <div className={styles.field}>
                         <div className={styles.title}>
                             <span>Посещаемость в день из Яндекса<br/>(среднее за последние 30 дней)</span>
-                            <Tooltip title="Средняя посещяемость"
+                            <Tooltip title="Средняя посещаемость"
                                      text="Каждому оформленному на сайте заказу устанавливается статус, который зависит от того, на каком этапе находится заказ и какие действия были совершены"
                             />
                         </div>
@@ -110,7 +114,7 @@ const CreateForm = () => {
                     <div className={styles.field}>
                         <div className={styles.title}>
                             <span>Среднее время на сайте</span>
-                            <Tooltip title="Средняя посещяемость"
+                            <Tooltip title="Средняя посещаемость"
                                      text="Каждому оформленному на сайте заказу устанавливается статус, который зависит от того, на каком этапе находится заказ и какие действия были совершены"
                             />
                         </div>
@@ -122,7 +126,7 @@ const CreateForm = () => {
                     <div className={styles.field}>
                         <div className={styles.title}>
                             <span>Глубина просмотра</span>
-                            <Tooltip title="Средняя посещяемость"
+                            <Tooltip title="Средняя посещаемость"
                                      text="Каждому оформленному на сайте заказу устанавливается статус, который зависит от того, на каком этапе находится заказ и какие действия были совершены"
                             />
                         </div>
@@ -134,7 +138,7 @@ const CreateForm = () => {
                     <div className={styles.group}>
                         <div className={styles.title}>
                             <span>Девайсы</span>
-                            <Tooltip title="Средняя посещяемость"
+                            <Tooltip title="Средняя посещаемость"
                                      text="Каждому оформленному на сайте заказу устанавливается статус, который зависит от того, на каком этапе находится заказ и какие действия были совершены"
                             />
                         </div>
@@ -160,7 +164,7 @@ const CreateForm = () => {
                     <div className={styles.group}>
                         <div className={styles.title}>
                             <span>Аудитория (Пол)</span>
-                            <Tooltip title="Средняя посещяемость"
+                            <Tooltip title="Средняя посещаемость"
                                      text="Каждому оформленному на сайте заказу устанавливается статус, который зависит от того, на каком этапе находится заказ и какие действия были совершены"
                             />
                         </div>
@@ -180,7 +184,7 @@ const CreateForm = () => {
                     <div className={styles.semanticCore}>
                         <div className={styles.title}>
                             <span>Семантическое ядро</span>
-                            <Tooltip title="Средняя посещяемость"
+                            <Tooltip title="Средняя посещаемость"
                                      text="Каждому оформленному на сайте заказу устанавливается статус, который зависит от того, на каком этапе находится заказ и какие действия были совершены"
                             />
                         </div>

@@ -79,6 +79,8 @@ const DatePicker = () => {
     };
 
     const handleDayClick = (day) => {
+        setFullYearCheck(false);
+        setFullMonthCheck(false);
         setRange(DateUtils.addDayToRange(day, range));
     };
 

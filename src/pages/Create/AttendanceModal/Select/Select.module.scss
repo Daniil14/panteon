@@ -1,0 +1,78 @@
+.container {
+    position: relative;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(158, 162, 173, 0.3);
+}
+
+.input {
+    padding: 0;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    color: #1A2540;
+}
+
+.input::placeholder {
+    color: rgba(158, 162, 173, 0.3);
+}
+
+.arrow {
+    transition: transform 300ms ease-in-out;
+}
+
+.open {
+    composes: arrow;
+    transform: rotate(180deg);
+}
+
+.list {
+    padding: 8px 0;
+    max-height: 112px;
+    width: 100%;
+    background: #FFFEFC;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.11), 0 3px 7px rgba(0, 0, 0, 0.13);
+    border-radius: 4px;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 1;
+
+    :global(.simplebar-track.simplebar-vertical) {
+        right: 0;
+    }
+
+    :global(.simplebar-track.simplebar-vertical) {
+        width: 8px;
+    }
+}
+
+.item {
+    font-size: 12px;
+    line-height: 16px;
+    color: #434E6A;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.empty {
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #9EA2AD;
+}
+
+.selected {
+    composes: item;
+    background-color: rgba(49, 107, 255, 0.1);
+}

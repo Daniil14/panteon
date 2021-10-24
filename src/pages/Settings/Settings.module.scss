@@ -15,7 +15,7 @@
 }
 
 .field {
-    @include form-field();
+    @include form-field;
     max-width: 437px;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .show {
-    @include reset-button();
+    @include reset-button;
     position: absolute;
     top: 50%;
     right: 8px;
@@ -49,6 +49,6 @@
 }
 
 .submit {
-    @include button-gray();
+    @include button-gray;
     max-width: 207px;
 }

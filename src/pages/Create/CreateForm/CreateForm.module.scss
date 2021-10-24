@@ -45,14 +45,31 @@
     gap: 8px;
 }
 
-.logoChange,
-.logoUpload {
-    @include button-gray-border();
+.logoChange {
+    @include button-gray-border;
     max-width: 220px;
 }
 
+.logoUpload {
+
+    input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    label {
+        @include button-gray-border;
+        display: block;
+        max-width: 220px;
+    }
+}
+
 .field {
-    @include form-field();
+    @include form-field;
     max-width: 628px;
 }
 
@@ -82,7 +99,7 @@
 }
 
 .cityChange {
-    @include button-blue();
+    @include button-blue;
     max-width: 225px;
 }
 
@@ -103,7 +120,7 @@
 }
 
 .submit {
-    @include button-blue();
+    @include button-blue;
     max-width: 166px;
     margin: 0;
 }

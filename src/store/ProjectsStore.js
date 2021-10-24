@@ -18,6 +18,7 @@ class ProjectsStore {
                             image: '/images/badge-1.svg',
                             name: 'ПривeтТур',
                             url: 'privettur.ru',
+                            external: 'https://privettur.ru/',
                             attendance: 2546,
                             timeOnSite: 3.58,
                             viewingDepth: 3.58,
@@ -120,6 +121,7 @@ class ProjectsStore {
                             image: '/images/badge-2.svg',
                             name: 'ГильдияПро',
                             url: 'guildpro.ru',
+                            external: 'https://gildiya.pro/',
                             attendance: 12312,
                             timeOnSite: 3.58,
                             viewingDepth: 3.58,
@@ -157,13 +159,13 @@ class ProjectsStore {
                     this.fetched = true;
                 });
             },
-            1000
+            2000
         );
     };
 
     addProject = (data) => {
         console.log('data', data);
-    }
+    };
 
     deleteProject = (id) => {
         this.projects = this.projects.filter((project) => project.id !== id);

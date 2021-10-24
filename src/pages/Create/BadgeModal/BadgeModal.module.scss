@@ -59,6 +59,6 @@
 }
 
 .save {
-    @include button-blue();
+    @include button-blue;
     width: 100%;
 }
