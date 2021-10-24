@@ -45,6 +45,10 @@
 
 .url {
     color: #316BFF;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .list {
@@ -145,6 +149,7 @@
     line-height: 15px;
     letter-spacing: -0.01em;
     color: #434E6A;
+    transition: color 150ms ease-in-out;
 
     button {
         @include reset-button;
@@ -156,5 +161,15 @@
     path {
         fill: #9EA2AD;
         opacity: 0.3;
+        transition: fill 150ms ease-in-out;
+    }
+
+    &:hover {
+        color: #316BFF;
+
+        path {
+            fill: #316BFF;
+            opacity: 0.6;
+        }
     }
 }

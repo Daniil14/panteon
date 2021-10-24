@@ -22,7 +22,7 @@ const Confirm = ({setIsOpen, setIsConfirm}) => {
                 <button className={styles.proceed}
                         onClick={() => setIsOpen(false)}
                         type="button">
-                    Продолжить
+                    Принять
                 </button>
                 <button className={styles.cancel}
                         onClick={() => setIsConfirm(false)}

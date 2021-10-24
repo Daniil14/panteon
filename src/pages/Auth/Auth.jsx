@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Formik, Form, Field} from 'formik';
 import MaskedInput from 'react-text-mask';
 import styles from './Auth.module.scss';
 
 // SVG:
 import {ReactComponent as LogoSvg} from 'assets/svg/logo.svg';
+import {ReactComponent as PassNotShowSvg} from 'assets/svg/pass-not-show.svg';
+import {ReactComponent as PassShowSvg} from 'assets/svg/pass-show.svg';
 
 const Auth = ({setIsAuth}) => {
+    const [showPassword, setShowPassword] = useState(false);
     const initialValues = {
         phone: '',
         pass: '',
@@ -48,12 +51,25 @@ const Auth = ({setIsAuth}) => {
                                 </Field>
                             </label>
                             <label className={styles.field}>
-                                <Field className={styles.input}
-                                       id="pass"
-                                       name="pass"
-                                       placeholder="Введите пароль..."
-                                       type="password"
-                                />
+                                <div className={styles.password}>
+                                    <Field className={styles.input}
+                                           id="pass"
+                                           name="pass"
+                                           placeholder="Введите пароль..."
+                                           type={showPassword ? 'text' : 'password'}
+                                    />
+                                    <button className={styles.show}
+                                            type="button"
+                                            onClick={() => setShowPassword(!showPassword)}
+                                            onMouseDown={(event) => event.preventDefault()}
+                                            onMouseUp={(event => event.preventDefault())}
+                                    >
+                                        {showPassword
+                                            ? <PassNotShowSvg width={24} height={24}/>
+                                            : <PassShowSvg width={24} height={24}/>
+                                        }
+                                    </button>
+                                </div>
                             </label>
                             <button className={styles.login} type="submit">Войти</button>
                             <button className={styles.restore} type="button">Восстановить пароль</button>

@@ -59,6 +59,19 @@
     @include input;
 }
 
+.password {
+    position: relative;
+}
+
+.show {
+    @include reset-button;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    line-height: 0;
+    transform: translateY(-50%);
+}
+
 .errorMessage {
     margin-top: 4px;
     font-size: 12px;

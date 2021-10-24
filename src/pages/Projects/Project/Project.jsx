@@ -24,7 +24,7 @@ const Project = ({project}) => {
             <div className={styles.wrapper}>
                 <div className={styles.header}>
                     <div className={styles.name}>{project.name}</div>
-                    <div className={styles.url}>{project.url}</div>
+                    <a className={styles.url} href={project.external} target="_blank" rel="noreferrer">{project.url}</a>
                 </div>
                 <ul className={styles.list}>
                     <li className={styles.item}>
