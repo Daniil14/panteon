@@ -13,7 +13,7 @@ const Confirm = ({setIsOpen, setIsConfirm}) => {
             </button>
             <header className={styles.header}>
                 <WarnSvg width={60} height={60}/>
-                <div className={styles.title}>Принять изменения посещаемости<br/>в городах</div>
+                <div className={styles.title}>Применить изменения посещаемости<br/>в городах</div>
                 <div className={styles.subtitle}>Вы всегда можете изменить количество посещаемости в городах, в
                     настройках проекта
                 </div>
@@ -22,7 +22,7 @@ const Confirm = ({setIsOpen, setIsConfirm}) => {
                 <button className={styles.proceed}
                         onClick={() => setIsOpen(false)}
                         type="button">
-                    Принять
+                    Применить
                 </button>
                 <button className={styles.cancel}
                         onClick={() => setIsConfirm(false)}

@@ -30,7 +30,7 @@ const BadgeModal = ({initialBadge ,setFieldValue, setIsOpen}) => {
             </header>
             <Formik initialValues={{badge: initialBadge}}
                     onSubmit={(values) => {
-                        setFieldValue('badge', values.badge);
+                        setFieldValue('image', values.badge);
                         setIsOpen(false);
                     }}
             >
