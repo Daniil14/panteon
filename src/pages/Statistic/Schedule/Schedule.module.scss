@@ -1,0 +1,61 @@
+@import "src/styles/mixins";
+
+.prompts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prompt {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #9EA2AD;
+}
+
+.tooltip {
+  width: max-content;
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+}
+
+.tooltipWrapper {
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.tooltipTitle {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #9EA2AD;
+}
+
+.tooltipUvula {
+  display: flex;
+  justify-content: center;
+}
+
+.tooltipValue {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: #1A2540;
+}
+
+.tooltipDate {
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #9EA2AD;
+}
+
+.save {
+  @include button-blue-border;
+  margin-top: 8px;
+}

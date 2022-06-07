@@ -13,12 +13,18 @@
     }
 }
 
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
 .range {
     display: flex;
-    max-width: 972px;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .sort {

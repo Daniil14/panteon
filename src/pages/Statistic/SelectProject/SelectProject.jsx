@@ -6,7 +6,7 @@ import styles from './SelectProject.module.scss';
 import {ReactComponent as DropDownArrow} from 'assets/svg/drop-down-arrow.svg';
 import {ReactComponent as ProjectLogoSvg} from 'assets/svg/project-logo.svg';
 
-const SelectProject = ({projects, isSelected, setIsSelected}) => {
+const SelectProject = ({projects, isSelected, showIcon, setIsSelected, label}) => {
     const [isOpen, setIsOpen] = useState(false);
     const ref = useOnclickOutside(() => setIsOpen(false));
     const changeSelectHandler = (index) => {
@@ -17,9 +17,9 @@ const SelectProject = ({projects, isSelected, setIsSelected}) => {
     return (
         <div className={styles.container} ref={ref}>
             <div>
-                <div className={styles.label}>Проект</div>
+                <div className={styles.label}>{label}</div>
                 <div className={styles.field} onClick={() => setIsOpen(!isOpen)}>
-                    <ProjectLogoSvg width={24} height={24}/>
+                    {showIcon && <ProjectLogoSvg width={24} height={24}/>}
                     <div className={styles.value}>{projects[isSelected].name}</div>
                     <DropDownArrow width={24} height={24}/>
                 </div>
